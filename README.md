@@ -121,7 +121,7 @@ adb devices
 
 ---
 
-# ✅ Tested Environment
+## ✅ Tested Environment
 
 This walkthrough was tested on:
 
@@ -404,3 +404,20 @@ This repository:
 This is a controlled educational lab focused on build configuration and sandbox behavior.
 
 ---
+
+## ☕ Support This Project
+
+If **AndroidVault™** helped you better understand Android, consider supporting continued development:
+
+<p align="center">
+  <a href="https://www.buymeacoffee.com/dfreshZ" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
+
+---
+<!-- 
+ _____              _       _____                        _          
+|  ___| __ ___  ___| |__   |  ___|__  _ __ ___ _ __  ___(_) ___ ___ ™️
+| |_ | '__/ _ \/ __| '_ \  | |_ / _ \| '__/ _ \ '_ \/ __| |/ __/ __|
+|  _|| | |  __/\__ \ | | | |  _| (_) | | |  __/ | | \__ \ | (__\__ \
+|_|  |_|  \___||___/_| |_| |_|  \___/|_|  \___|_| |_|___/_|\___|___/
+        freshforensicsllc@tuta.com Fresh Forensics, LLC 2026 -->
