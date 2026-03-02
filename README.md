@@ -58,26 +58,35 @@ sudo apt install adb
 
 ## 2️⃣ apktool
 
-Used for decompiling and rebuilding the APK.
+Used for decompiling and rebuilding APKs.
+
+⚠️ **Important:**
+Many Linux distributions (including Kali) ship an outdated version of apktool in their repositories. Newer Android apps use updated resource formats and framework structures that older versions of apktool cannot properly rebuild.
+
+If you encounter rebuild errors, install the latest official version.
+
+Check your current version:
 
 ```bash
 apktool --version
 ```
 
-Install:
+If it’s outdated, follow the official installation guide here:
 
-```bash
+👉 [https://apktool.org/docs/install](https://apktool.org/docs/install)
 
-    Download the Linux wrapper script. (Right click, Save Link As apktool)
-    Download the latest version of Apktool.
-    Rename the downloaded jar to apktool.jar.
-    Move both apktool.jar and apktool to /usr/local/bin. (root needed)
-    Make sure both files are executable. (chmod +x)
-    Try running apktool via CLI.
+The official page provides up-to-date instructions for:
 
-```
+* Downloading the latest wrapper script
+* Downloading the latest `apktool.jar`
+* Proper placement in `/usr/local/bin`
+* Setting executable permissions
+* Verifying installation
+
+Always use the latest stable release when working with modern Android builds.
 
 ---
+
 
 ## 3️⃣ Java (JDK)
 
@@ -152,10 +161,10 @@ Go to the repository’s **Releases** section and download:
 FreshForensicsVault_v1.0_release.apk
 ```
 
-This build is configured with:
+Unless explicitly configured, all builds default to:
 
 ```xml
-android:allowBackup="false"
+android:debuggable="false"
 ```
 
 ---
@@ -240,6 +249,11 @@ Add:
 android:debuggable="true"
 ```
 
+After:
+```xml
+<application android:allowBackup="false"
+```
+
 Save.
 
 ---
@@ -255,7 +269,7 @@ apktool b FreshVault_Extracted -o FreshVault_modified.apk
 ## 7️⃣  Align APK with zipalign
 
 ```bash
-zipaling -v 4 FreshVault_modified.apk -o FreshVault_aligned.apk
+zipaling -v 4 FreshVault_modified.apk FreshVault_aligned.apk
 ```
 
 ## 8️⃣  Create a Signing Key (One Time)
@@ -302,7 +316,7 @@ Install modified version:
 adb install FreshVault_aligned.apk
 ```
 
-Launch once.
+Launch App, type secrets into note & click save
 
 ---
 
